@@ -1069,7 +1069,7 @@ img::-moz-selection {
 }
 
 .container .toc-wrap li ol a {
-    color: #2f2f2f;
+    color: #000000;
     font-size: .85em;
     padding-left: 5px;
 }
