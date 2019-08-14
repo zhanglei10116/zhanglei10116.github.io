@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        FirstChar｜Joe&#39;s Blog
+        React Char1｜Joe&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="http://zhanglei10116.github.io/2019/07/24/FirstChar/">
+    <link rel="canonical" href="http://zhanglei10116.github.io/2019/08/14/React_1/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -151,18 +151,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>FirstChar</h1>
+                    <h1>React Char1</h1>
                     
                     <span class="meta">
                          作者 Joe
                         <span>
-                          日期 2019-07-24
+                          日期 2019-08-14
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#hello"
-                           title="hello">hello</a>
+                        <a class="tag" href="/tags/#React"
+                           title="React">React</a>
                         
                     </div>
                 </div>
@@ -171,7 +171,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            FirstChar
+            React Char1
         </span>
     </div>
 </header>
@@ -182,19 +182,33 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="FirstCharTest"><a href="#FirstCharTest" class="headerlink" title="FirstCharTest"></a>FirstCharTest</h3><pre><code class="java">System.out.println(<span class="string">"hello!"</span>)</code></pre>
-<pre><code class="sql"><span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> dual;</code></pre>
+                <h1 id="React-组件生命周期"><a href="#React-组件生命周期" class="headerlink" title="React 组件生命周期"></a>React 组件生命周期</h1><p><strong>React</strong>组件的生命周期分为三大部分：</p>
+<ul>
+<li>挂载 <em>(Mount)</em> ：组件第一次在DOM树中渲染</li>
+<li>更新 <em>(Update)</em> ：组件更新，即重渲染</li>
+<li>卸载 <em>(Unmount)</em>：把组件从DOM树中删除</li>
+</ul>
+<p>1.挂载(Mount) <br><br>定义：把组件渲染，并且构造DOM元素插入到页面的过程称为组件的挂载<br><br>组件挂载的过程（组件挂载先关函数，只在组件挂载的时候调用，在组件更新时不会执行）<br></p>
+<ul>
+<li>constructor()：组件初始化，初始化state值。<br></li>
+<li>componmentWillMount()：组件挂载之前执行，在render函数之前执行，仅在挂载的时候执行一次，即使后续组件被多次重渲染，也不会再执行。<br></li>
+<li>render()：React渲染。<br></li>
+<li>componentDidMount()：组件挂载后执行，在render函数之后执行，仅在挂载的时候执行一次，即使后续组件被多次重渲染，也不会再执行。<br>  </li>
+</ul>
+<p>2.更新(Update) <br><br>组件更新相关函数，在组件初始挂载的时候都不会调用。<br></p>
+<ul>
+<li>componentWillReceiveProps(nextProps)<br><br>当父组件传递给子组件的props发生变化时调用 ，该函数有一个参数nextProps（即新的Props的值），this.props可以获取到当前的props（即旧的props），通过对比nextProps与this.props来重渲染组件。<br></li>
+<li>shouldComponentUpdate(nextProps,nextState)<br><br>在组件接收到新的props或state时调用，通过返回值来确定是否重新渲染当前组件，函数的两个参数，nextProps和nextState，分别表示获取到的新的props和新的state；<br></li>
+<li>componentWillUpdate(nextProps,nextState) <br><br>在shouldComponentUpdate执行并返回了true的时候被调用，组件开始重渲染，该函数的两个参数，nextProps和nextState，分别表示获取到的新的props和新的state；<br></li>
+<li>componentDidUpdate(prevProps,prevState)<br><br>组件更新，重渲染完毕后调用，该函数也有两个参数，prevProps 和prevState ，分别表示组件更新前的props和state。<br></li>
+</ul>
+<p>3.卸载(Unmount)<br>componentWillUnmount函数在组件卸载的时候执行。</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    
-                    <li class="next">
-                        <a href="/2019/07/22/hello-world/" data-toggle="tooltip" data-placement="top"
-                           title="Hello World">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
@@ -231,7 +245,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标题"><span class="toc-text">标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-text">测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FirstCharTest"><span class="toc-text">FirstCharTest</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#React-组件生命周期"><span class="toc-text">React 组件生命周期</span></a></li></ol>
                 </div>
             </div>
         </div>
