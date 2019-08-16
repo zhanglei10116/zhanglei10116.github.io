@@ -22,7 +22,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://zhanglei10116.github.io/2019/08/14/React_1/">
+    <link rel="canonical" href="http://zhanglei10116.github.io/2019/08/16/React_1/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -156,7 +156,7 @@
                     <span class="meta">
                          作者 Joe
                         <span>
-                          日期 2019-08-14
+                          日期 2019-08-16
                          </span>
                     </span>
                     <div class="tags text-center">
@@ -188,21 +188,18 @@
 <li>更新 <em>(Update)</em> ：组件更新，即重渲染</li>
 <li>卸载 <em>(Unmount)</em>：把组件从DOM树中删除</li>
 </ul>
-<p>1.挂载(Mount) <br><br>定义：把组件渲染，并且构造DOM元素插入到页面的过程称为组件的挂载<br><br>组件挂载的过程（组件挂载先关函数，只在组件挂载的时候调用，在组件更新时不会执行）<br></p>
+<p>##1.挂载(Mount) <br><br>定义：把组件渲染，并且构造DOM元素插入到页面的过程称为组件的挂载<br><br>组件挂载的过程（组件挂载先关函数，只在组件挂载的时候调用，在组件更新时不会执行）<br></p>
 <ul>
 <li>constructor()：组件初始化，初始化state值。<br></li>
 <li>componmentWillMount()：组件挂载之前执行，在render函数之前执行，仅在挂载的时候执行一次，即使后续组件被多次重渲染，也不会再执行。<br></li>
 <li>render()：React渲染。<br></li>
-<li>componentDidMount()：组件挂载后执行，在render函数之后执行，仅在挂载的时候执行一次，即使后续组件被多次重渲染，也不会再执行。<br>  </li>
-</ul>
-<p>2.更新(Update) <br><br>组件更新相关函数，在组件初始挂载的时候都不会调用。<br></p>
-<ul>
+<li>componentDidMount()：组件挂载后执行，在render函数之后执行，仅在挂载的时候执行一次，即使后续组件被多次重渲染，也不会再执行。<br><br>##2.更新(Update) <br><br>组件更新相关函数，在组件初始挂载的时候都不会调用。<br></li>
 <li>componentWillReceiveProps(nextProps)<br><br>当父组件传递给子组件的props发生变化时调用 ，该函数有一个参数nextProps（即新的Props的值），this.props可以获取到当前的props（即旧的props），通过对比nextProps与this.props来重渲染组件。<br></li>
 <li>shouldComponentUpdate(nextProps,nextState)<br><br>在组件接收到新的props或state时调用，通过返回值来确定是否重新渲染当前组件，函数的两个参数，nextProps和nextState，分别表示获取到的新的props和新的state；<br></li>
 <li>componentWillUpdate(nextProps,nextState) <br><br>在shouldComponentUpdate执行并返回了true的时候被调用，组件开始重渲染，该函数的两个参数，nextProps和nextState，分别表示获取到的新的props和新的state；<br></li>
 <li>componentDidUpdate(prevProps,prevState)<br><br>组件更新，重渲染完毕后调用，该函数也有两个参数，prevProps 和prevState ，分别表示组件更新前的props和state。<br></li>
 </ul>
-<p>3.卸载(Unmount)<br>componentWillUnmount函数在组件卸载的时候执行。</p>
+<p>##3.卸载(Unmount)<br>componentWillUnmount函数在组件卸载的时候执行。</p>
 
                 <hr>
                 
